@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="regno">RegNo</label>
+            <input type="text" id="regno" name="regno" placeholder="Enter your registration number" required>
+
+            <label for="email">EmailId</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your feedback" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="success-message" id="successMessage" style="display: none;">Thank you for your feedback!</div>
+
+        <!-- Table initially hidden -->
+        <h3 id="tableHeading" style="display: none;">Submitted Feedback</h3>
+        <table id="feedbackTable" border="1" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>RegNo</th>
+                    <th>Email</th>
+                    <th>Feedback</th>
+                </tr>
+            </thead>
+            <tbody id="feedbackTableBody">
+                <!-- Form data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
